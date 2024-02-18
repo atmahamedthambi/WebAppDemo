@@ -1,0 +1,47 @@
+﻿@page "/UserRegistration"
+<PageTitle>User Registration</PageTitle>
+
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <EditForm Model="UserRegistrationModel" FormName="RegistrationForm"
+                OnValidSubmit="OnRegistrationFormSubmit" autocomplete="off">
+                <DataAnnotationsValidator></DataAnnotationsValidator>
+                <ValidationSummary></ValidationSummary>
+                <h2>New User Registration</h2>
+                <hr />
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="UserRegistrationModel.Username" class="form-control"></InputText>
+                    <label>Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="UserRegistrationModel.Email" class="form-control"></InputText>
+                    <label>Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="UserRegistrationModel.Password" type="password" class="form-control"></InputText>
+                    <label>Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="UserRegistrationModel.PhoneNumber" class="form-control"></InputText>
+                    <label>Phone Number</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <InputSelect class="form-control" @bind-Value="UserRegistrationModel.Role">
+                        <option disabled="disabled" selected>Select a Role</option>
+                        @if (UserRegistrationModel.Roles != null)
+                        {
+                        foreach (var item in UserRegistrationModel.Roles)
+                            {
+                                <option value="@item.Name">@item.Name</option>
+                            }    
+                        }
+                    </InputSelect>
+                </div>
+                <div>
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                </div>
+            </EditForm>
+        </section>
+    </div>
+</div>

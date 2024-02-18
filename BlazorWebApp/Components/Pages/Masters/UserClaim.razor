@@ -1,0 +1,26 @@
+﻿@page "/UserClaim"
+
+//When we land this page we need to get the logged in user's details and call our web api endpoint to add new claim to the logged in user.'
+
+<div class="row">
+    <div class="col-md-4">
+        <EditForm Model="UserClaimsModel" FormName="UserClaimForm" OnValidSubmit="OnUserClaimsFormSubmit" autocomplete="off">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <h2>Create new Claim</h2>
+            <hr />
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="UserClaimsModel.ClaimType" placeholder="Claim Type" class="form-control"></InputText>
+                <label class="form-label">Claim Type</label>
+                <ValidationMessage For="()=>UserClaimsModel.ClaimType" class="text-danger"></ValidationMessage>
+            </div>
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="UserClaimsModel.ClaimValue" placeholder="Claim Value" class="form-control"></InputText>
+                <label class="form-label">Claim Value</label>
+                <ValidationMessage For="()=>UserClaimsModel.ClaimValue" class="text-danger"></ValidationMessage>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-lg btn-primary w-100">Create</button>
+            </div>
+        </EditForm>
+    </div>
+</div>

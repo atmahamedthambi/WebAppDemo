@@ -1,0 +1,24 @@
+﻿@page "/UserLogin"
+
+<EditForm Model="UserLoginModel" OnValidSubmit="OnUserLoginFormSubmit" autocomplete="off">
+    <DataAnnotationsValidator />
+    <div class="card">
+        <div class="card-header">
+            <h3>User Login</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <label>Email</label>
+                <InputText @bind-Value="UserLoginModel.Email" class="form-control"></InputText>
+                <ValidationMessage For="@(()=>UserLoginModel.Email)" class="text-danger"></ValidationMessage>
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <InputText @bind-Value="UserLoginModel.Password" type="password" class="form-control"></InputText>
+                <ValidationMessage For="@(()=>UserLoginModel.Password)" class="text-danger"></ValidationMessage>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-outline-primary">Login</button>
+        </div>
+    </div>
+</EditForm>

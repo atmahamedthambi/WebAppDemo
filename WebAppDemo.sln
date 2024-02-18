@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthWebApi", "AuthWebApi\AuthWebApi.csproj", "{319741A5-97F2-4A38-8B87-B7BC8C453A50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebApp", "BlazorWebApp\BlazorWebApp.csproj", "{9F7F6FC2-5565-436F-A049-F1C90E5C3864}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{319741A5-97F2-4A38-8B87-B7BC8C453A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319741A5-97F2-4A38-8B87-B7BC8C453A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319741A5-97F2-4A38-8B87-B7BC8C453A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319741A5-97F2-4A38-8B87-B7BC8C453A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7F6FC2-5565-436F-A049-F1C90E5C3864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7F6FC2-5565-436F-A049-F1C90E5C3864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7F6FC2-5565-436F-A049-F1C90E5C3864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7F6FC2-5565-436F-A049-F1C90E5C3864}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B93AA3B-50D7-4D61-9FE3-9331C1087721}
+	EndGlobalSection
+EndGlobal

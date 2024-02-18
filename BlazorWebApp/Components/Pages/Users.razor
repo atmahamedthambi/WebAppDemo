@@ -1,0 +1,28 @@
+﻿@page "/AllUsers"
+
+<h3>Users</h3>
+
+<div>
+    @if (UserList != null && UserList.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>PhoneNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in UserList)
+                {
+                    <tr>
+                        <td>@item.Username</td>
+                        <td>@item.Email</td>
+                        <td>@item.PhoneNumber</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

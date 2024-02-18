@@ -1,0 +1,19 @@
+﻿@page "/CreateRole"
+
+<div class="row">
+    <div class="col-md-4">
+        <EditForm Model="RolesModel" FormName="RolesModel" OnValidSubmit="OnRolesFormSubmit" autocomplete="off">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <h2>Create new role</h2>
+            <hr />
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="RolesModel.Name" placeholder="Role Name" class="form-control"></InputText>
+                <label class="form-label">Role Name</label>
+                <ValidationMessage For="()=>RolesModel.Name" class="text-danger"></ValidationMessage>
+            </div>
+            <div >
+                <button type="submit" class="btn btn-lg btn-primary w-100">Create</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
