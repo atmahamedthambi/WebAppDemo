@@ -1,6 +1,0 @@
-@OpenIdWebApi_HostAddress = http://localhost:5170
-
-GET {{OpenIdWebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
